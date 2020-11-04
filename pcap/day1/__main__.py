@@ -7,15 +7,15 @@
 from typing import Iterator, List
 
 
-def numbers(n: int) -> List[int]:
+def numbers(limit: int) -> List[int]:
     result = []
-    for i in range(1, n + 1):
+    for i in range(1, limit + 1):
         result.append(i)
     return result
 
 
-def number_generator(n: int) -> Iterator[int]:
-    for num in range(1, n + 1):
+def number_generator(limit: int) -> Iterator[int]:
+    for num in range(1, limit + 1):
         yield num
 
 
