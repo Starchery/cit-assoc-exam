@@ -3,7 +3,7 @@ def uppercase(s: str) -> str:
 
 
 def main():
-    data = open("data.txt", "r")
+    data = open("data/data.txt", "r")
     print(type(data))
 
     data = map(uppercase, data)
