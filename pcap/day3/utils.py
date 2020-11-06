@@ -1,16 +1,16 @@
-def clean_file(fname: str) -> None:
+def clean_file(filename: str) -> None:
     """
     Remove any blank lines from a file.
 
     Parameters
     ----------
-    fname : str
+    filename : str
         The file that will be 'cleaned.'
     """
-    with open(fname, "r") as infile:
+    with open(filename, "r") as infile:
         all_lines = infile.readlines()
 
-    with open(fname, "w") as outfile:
+    with open(filename, "w") as outfile:
         outfile.writelines(line for line in all_lines if len(line) > 1)
 
 
@@ -20,7 +20,9 @@ def add(x: float, y: float) -> float:
 
 
 def convert_to_float(value: str) -> float:
-    if not value:  # if the string is empty
-        return 0.00
-    else:
-        return float(value)
+    try:
+        result = float(value)
+    except ValueError:
+        result = 0.00
+
+    return result

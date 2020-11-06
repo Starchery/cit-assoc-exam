@@ -14,8 +14,11 @@ def read_csv(fname: str) -> Dict[str, List[float]]:
         rows = filter(lambda row: row[0] != "Total", rows)  # skip the last row
         rows = map(lambda row: row[:-1], rows)  # skip the last column
 
-        global top_row
-        top_row = next(rows)  # skip the first row
+        try:
+            global top_row
+            top_row = next(rows)  # skip the first row
+        except StopIteration:
+            pass
 
         for row in rows:
             category: str = row.pop(0)  # get and remove the first value
