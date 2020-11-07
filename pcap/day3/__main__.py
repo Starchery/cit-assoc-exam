@@ -8,15 +8,18 @@ def main():
     except FileNotFoundError as err:
         print(f"Bad filename: {err.filename}")
         return
+    except utils.EmptyFile as err:
+        print(err)
+        return
     except OSError as err:
         print(f"Uhhhhhh {err}")
         return
 
     result_csv = csv_parser.merge_csv(a_csv, b_csv)
-    csv_parser.write_csv("data/result2.csv", result_csv)
 
     try:
-        utils.clean_file("data/result2.csv")
+        csv_parser.write_csv("data/result3.csv", result_csv)
+        utils.clean_file("data/result3.csv")
     except OSError as err:
         print(f"I found an error: {err}")
 

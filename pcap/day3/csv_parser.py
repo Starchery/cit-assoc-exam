@@ -18,7 +18,7 @@ def read_csv(fname: str) -> Dict[str, List[float]]:
             global top_row
             top_row = next(rows)  # skip the first row
         except StopIteration:
-            pass
+            raise utils.EmptyFile(f"The file {fname} is empty.")
 
         for row in rows:
             category: str = row.pop(0)  # get and remove the first value

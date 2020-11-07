@@ -1,3 +1,8 @@
+class EmptyFile(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+
+
 def clean_file(filename: str) -> None:
     """
     Remove any blank lines from a file.
