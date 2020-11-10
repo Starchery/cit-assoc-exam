@@ -1,4 +1,10 @@
 class EmptyFile(Exception):
+    """
+    This will be raised if the CSV passed in is empty
+
+    An EmptyFile is a "special case" of an Exception.
+    """
+
     def __init__(self, message):
         super().__init__(message)
 
