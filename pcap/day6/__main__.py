@@ -24,9 +24,10 @@ class Employee(Person):
 
 
 class Manager(Employee):
-    def __init__(self, name, age, salary):
-        super().__init__(name, age, salary)
+    def __init__(self, name, age):
+        super().__init__(name, age, salary=1_000_000)
 
+    # Override
     def boss_around(self, other):
         if isinstance(other, Manager):
             print("Hi pal")
