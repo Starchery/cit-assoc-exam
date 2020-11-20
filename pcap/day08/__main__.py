@@ -1,4 +1,4 @@
-import pcap.day8.caesar_cipher as cc
+import pcap.day08.caesar_cipher as cc
 
 # Import the module "caesar_cipher" from the package day8 in the package pcap
 # 'as' allows us to use a shorter name for a module

@@ -1,6 +1,6 @@
 """Docstring for __main__.py"""
 
-from pcap.day9.uploader import Uploader
+from pcap.day10.uploader import Uploader
 
 # If this file is being run directly
 # instead of being imported
