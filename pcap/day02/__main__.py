@@ -10,4 +10,5 @@ def main():
     print(type(data))
 
 
-main()
+if __name__ == "__main__":
+    main()

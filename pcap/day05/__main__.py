@@ -45,3 +45,7 @@ def main():
 
     adam.greet(laura)
     laura.greet(adam)
+
+
+if __name__ == "__main__":
+    main()

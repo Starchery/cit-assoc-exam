@@ -24,4 +24,5 @@ def main():
         print(f"I found an error: {err}")
 
 
-main()
+if __name__ == "__main__":
+    main()
