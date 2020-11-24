@@ -12,15 +12,6 @@ class Uploader:
             or self.__get_file_from_argv()
             or self.__get_file_from_tkinter()
         )
-        # Equivalent to:
-        # if filename is not None:
-        #     self.filename = filename
-        # else:
-        #     filename = self.__get_file_from_argv()
-        #     if filename is not None:
-        #         self.filename = filename
-        #     else:
-        #         self.filename = self.__get_file_from_tkinter()
 
         self.url = None
 
