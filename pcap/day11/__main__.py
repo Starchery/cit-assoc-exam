@@ -60,5 +60,5 @@ def main():
     citlogger("Assigned x+1 to x")  # [pcap] Assigned x+1 to x
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
